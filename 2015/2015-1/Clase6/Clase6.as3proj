@@ -4,20 +4,19 @@
   <output>
     <movie outputType="Application" />
     <movie input="" />
-    <movie path="bin\Clase5.swf" />
+    <movie path="bin\Ejercicio2.swf" />
     <movie fps="30" />
-    <movie width="480" />
-    <movie height="762" />
-    <movie version="16" />
+    <movie width="800" />
+    <movie height="600" />
+    <movie version="14" />
     <movie minorVersion="0" />
-    <movie platform="AIR Mobile" />
+    <movie platform="Flash Player" />
     <movie background="#FFFFFF" />
-    <movie preferredSDK="Flex 4.6.0, AIR 16.0;4.6.0, 16.0;" />
   </output>
   <!-- Other classes to be compiled into your SWF -->
   <classpaths>
     <class path="src" />
-    <class path="..\lib\starling\src" />
+    <class path="lib\starling\src" />
   </classpaths>
   <!-- Build options -->
   <build>
@@ -87,8 +86,8 @@
   <!-- Other project options -->
   <options>
     <option showHiddenPaths="False" />
-    <option testMovie="Custom" />
-    <option testMovieCommand="Run.bat" />
+    <option testMovie="Default" />
+    <option testMovieCommand="" />
   </options>
   <!-- Plugin storage -->
   <storage />
