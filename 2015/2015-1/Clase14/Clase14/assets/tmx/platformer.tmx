@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="23" height="9" tilewidth="64" tileheight="64" nextobjectid="91">
+ <tileset firstgid="1" name="Tileset.png" tilewidth="64" tileheight="64">
+  <image source="Tileset.png" width="576" height="192"/>
+ </tileset>
+ <layer name="background" width="23" height="9">
+  <data encoding="base64" compression="zlib">
+   eJzjZGBg4ABizlF6lB6lSaIBL+EG4Q==
+  </data>
+ </layer>
+ <layer name="platforms" width="23" height="9">
+  <data encoding="base64" compression="zlib">
+   eJytkNEKgCAMRacGwiof6v//NYIrXEbLGV04MKce2IqIHANWMJMCRvHcjeo84ea3njsT9r67E8E+/sfnSKI7iSQZ/nTbvLk3p9+c2nPzLBUo/E+cwO6hEt2txAL0Aztxey8ryAL1
+  </data>
+ </layer>
+ <layer name="decorations" width="23" height="9">
+  <data encoding="base64" compression="zlib">
+   eJxjYGBgECGAKQVsVFaHrJ4fizgLFBNSR4ndxAABKM1Povm0cAvMXELhQAyQwCLGz4DwpwAWeXE8eocqAAB9tQGg
+  </data>
+ </layer>
+ <layer name="decorations2" width="23" height="9">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFtAKsaHgUQMBwCRMAM8AAJA==
+  </data>
+ </layer>
+ <objectgroup name="citrus objects">
+  <object id="1" type="citrus.objects.platformer.box2d.Platform" x="0" y="0" width="64" height="576"/>
+  <object id="2" type="citrus.objects.platformer.box2d.Platform" x="64" y="448" width="192" height="128"/>
+  <object id="3" type="citrus.objects.platformer.box2d.Platform" x="384" y="448" width="448" height="128"/>
+  <object id="4" type="citrus.objects.platformer.box2d.Platform" x="960" y="448" width="256" height="128"/>
+  <object id="5" type="citrus.objects.platformer.box2d.Platform" x="832" y="512" width="128" height="64"/>
+  <object id="6" type="citrus.objects.platformer.box2d.Platform" x="64" y="192" width="192" height="64"/>
+  <object id="7" type="citrus.objects.platformer.box2d.Platform" x="384" y="192" width="448" height="64"/>
+  <object id="8" type="citrus.objects.platformer.box2d.Platform" x="576" y="0" width="128" height="192"/>
+  <object id="9" type="citrus.objects.platformer.box2d.Platform" x="960" y="128" width="255" height="61"/>
+  <object id="10" type="citrus.objects.platformer.box2d.Platform" x="1152" y="256" width="254" height="64"/>
+  <object id="11" type="citrus.objects.platformer.box2d.Platform" x="1408" y="0" width="64" height="576"/>
+  <object id="12" type="citrus.objects.platformer.box2d.Platform" x="256" y="448" width="127" height="18"/>
+  <object id="13" type="citrus.objects.platformer.box2d.Platform" x="1216" y="448" width="191" height="20"/>
+  <object id="14" type="citrus.objects.platformer.box2d.Platform" x="954" y="233" width="124" height="21"/>
+  <object id="15" type="citrus.objects.platformer.box2d.Platform" x="68" y="0" width="507" height="19"/>
+  <object id="16" name="hero" type="Proto" x="83" y="370" width="38" height="63">
+   <properties>
+    <property name="canDuck" value="false"/>
+    <property name="hurtVelocityX" value="3"/>
+    <property name="hurtVelocityY" value="5"/>
+    <property name="jumpHeight" value="9"/>
+    <property name="maxVelocity" value="3"/>
+   </properties>
+  </object>
+  <object id="17" name="crate" type="citrus.objects.platformer.box2d.Crate" x="192" y="128" width="64" height="64"/>
+  <object id="18" type="citrus.objects.platformer.box2d.MovingPlatform" x="285" y="128" width="66" height="15">
+   <properties>
+    <property name="endX" value="320"/>
+    <property name="endY" value="400"/>
+    <property name="speed" value="0.8"/>
+    <property name="startX" value="320"/>
+   </properties>
+  </object>
+  <object id="19" type="citrus.objects.platformer.box2d.MovingPlatform" x="859" y="129" width="67" height="14">
+   <properties>
+    <property name="endX" value="896"/>
+    <property name="endY" value="400"/>
+    <property name="speed" value="0.8"/>
+    <property name="startX" value="896"/>
+    <property name="startY" value="192"/>
+   </properties>
+  </object>
+  <object id="20" type="citrus.objects.platformer.box2d.Enemy" x="642" y="407" width="48" height="26">
+   <properties>
+    <property name="speed" value="0.5"/>
+   </properties>
+  </object>
+  <object id="21" type="citrus.objects.platformer.box2d.Enemy" x="1061" y="85" width="48" height="26">
+   <properties>
+    <property name="speed" value="0.5"/>
+   </properties>
+  </object>
+  <object id="22" type="citrus.objects.platformer.box2d.Enemy" x="1344" y="407" width="48" height="26">
+   <properties>
+    <property name="speed" value="0.5"/>
+   </properties>
+  </object>
+  <object id="23" type="citrus.objects.platformer.box2d.Platform" x="966" y="110" width="47" height="31"/>
+  <object id="24" type="citrus.objects.platformer.box2d.Platform" x="776" y="425" width="47" height="31"/>
+  <object id="25" type="citrus.objects.platformer.box2d.Platform" x="384" y="128" width="64" height="64"/>
+  <object id="26" type="citrus.objects.platformer.box2d.Platform" x="968" y="425" width="47" height="31"/>
+  <object id="27" type="citrus.objects.platformer.box2d.Platform" x="1152" y="64" width="64" height="64"/>
+  <object id="28" type="citrus.objects.platformer.box2d.Platform" x="384" y="384" width="64" height="64"/>
+  <object id="29" name="crate" type="citrus.objects.platformer.box2d.Crate" x="1280" y="192" width="64" height="64"/>
+  <object id="30" type="citrus.objects.platformer.box2d.Coin" x="177" y="289" width="28" height="29"/>
+  <object id="31" type="citrus.objects.platformer.box2d.Coin" x="131" y="289" width="28" height="29"/>
+  <object id="32" type="citrus.objects.platformer.box2d.Coin" x="224" y="289" width="28" height="29"/>
+  <object id="33" type="citrus.objects.platformer.box2d.Coin" x="224" y="336" width="28" height="29"/>
+  <object id="34" type="citrus.objects.platformer.box2d.Coin" x="178" y="335" width="28" height="29"/>
+  <object id="35" type="citrus.objects.platformer.box2d.Coin" x="132" y="335" width="28" height="29"/>
+  <object id="36" type="citrus.objects.platformer.box2d.Coin" x="488" y="65" width="28" height="29"/>
+  <object id="37" type="citrus.objects.platformer.box2d.Coin" x="535" y="65" width="28" height="29"/>
+  <object id="38" type="citrus.objects.platformer.box2d.Coin" x="442" y="65" width="28" height="29"/>
+  <object id="39" type="citrus.objects.platformer.box2d.Coin" x="519" y="290" width="28" height="29"/>
+  <object id="40" type="citrus.objects.platformer.box2d.Coin" x="520" y="336" width="28" height="29"/>
+  <object id="41" type="citrus.objects.platformer.box2d.Coin" x="566" y="337" width="28" height="29"/>
+  <object id="42" type="citrus.objects.platformer.box2d.Coin" x="566" y="290" width="28" height="29"/>
+  <object id="43" type="citrus.objects.platformer.box2d.Coin" x="474" y="336" width="28" height="29"/>
+  <object id="44" type="citrus.objects.platformer.box2d.Coin" x="473" y="290" width="28" height="29"/>
+  <object id="45" type="citrus.objects.platformer.box2d.Coin" x="659" y="289" width="28" height="29"/>
+  <object id="46" type="citrus.objects.platformer.box2d.Coin" x="660" y="335" width="28" height="29"/>
+  <object id="47" type="citrus.objects.platformer.box2d.Coin" x="706" y="336" width="28" height="29"/>
+  <object id="48" type="citrus.objects.platformer.box2d.Coin" x="706" y="289" width="28" height="29"/>
+  <object id="49" type="citrus.objects.platformer.box2d.Coin" x="614" y="335" width="28" height="29"/>
+  <object id="50" type="citrus.objects.platformer.box2d.Coin" x="613" y="289" width="28" height="29"/>
+  <object id="51" type="citrus.objects.platformer.box2d.Coin" x="764" y="37" width="28" height="29"/>
+  <object id="52" type="citrus.objects.platformer.box2d.Coin" x="765" y="83" width="28" height="29"/>
+  <object id="53" type="citrus.objects.platformer.box2d.Coin" x="811" y="84" width="28" height="29"/>
+  <object id="54" type="citrus.objects.platformer.box2d.Coin" x="811" y="37" width="28" height="29"/>
+  <object id="55" type="citrus.objects.platformer.box2d.Coin" x="719" y="83" width="28" height="29"/>
+  <object id="56" type="citrus.objects.platformer.box2d.Coin" x="718" y="37" width="28" height="29"/>
+  <object id="57" type="citrus.objects.platformer.box2d.Coin" x="1004" y="26" width="28" height="29"/>
+  <object id="58" type="citrus.objects.platformer.box2d.Coin" x="1097" y="26" width="28" height="29"/>
+  <object id="59" type="citrus.objects.platformer.box2d.Coin" x="1050" y="26" width="28" height="29"/>
+  <object id="60" type="citrus.objects.platformer.box2d.Coin" x="1299" y="65" width="28" height="29"/>
+  <object id="61" type="citrus.objects.platformer.box2d.Coin" x="1253" y="65" width="28" height="29"/>
+  <object id="62" type="citrus.objects.platformer.box2d.Coin" x="1345" y="66" width="28" height="29"/>
+  <object id="63" type="citrus.objects.platformer.box2d.Coin" x="1252" y="19" width="28" height="29"/>
+  <object id="64" type="citrus.objects.platformer.box2d.Coin" x="1345" y="19" width="28" height="29"/>
+  <object id="65" type="citrus.objects.platformer.box2d.Coin" x="1298" y="19" width="28" height="29"/>
+  <object id="66" type="citrus.objects.platformer.box2d.Coin" x="1255" y="110" width="28" height="29"/>
+  <object id="67" type="citrus.objects.platformer.box2d.Coin" x="1301" y="110" width="28" height="29"/>
+  <object id="68" type="citrus.objects.platformer.box2d.Coin" x="1347" y="111" width="28" height="29"/>
+  <object id="69" type="citrus.objects.platformer.box2d.Coin" x="880" y="220" width="28" height="29"/>
+  <object id="70" type="citrus.objects.platformer.box2d.Coin" x="880" y="173" width="28" height="29"/>
+  <object id="71" type="citrus.objects.platformer.box2d.Coin" x="879" y="316" width="28" height="29"/>
+  <object id="72" type="citrus.objects.platformer.box2d.Coin" x="879" y="269" width="28" height="29"/>
+  <object id="73" type="citrus.objects.platformer.box2d.Coin" x="1267" y="339" width="28" height="29"/>
+  <object id="74" type="citrus.objects.platformer.box2d.Coin" x="1127" y="340" width="28" height="29"/>
+  <object id="75" type="citrus.objects.platformer.box2d.Coin" x="1220" y="340" width="28" height="29"/>
+  <object id="76" type="citrus.objects.platformer.box2d.Coin" x="1360" y="339" width="28" height="29"/>
+  <object id="77" type="citrus.objects.platformer.box2d.Coin" x="1313" y="339" width="28" height="29"/>
+  <object id="78" type="citrus.objects.platformer.box2d.Coin" x="1173" y="340" width="28" height="29"/>
+  <object id="79" type="citrus.objects.platformer.box2d.Coin" x="92" y="67" width="28" height="29"/>
+  <object id="80" type="citrus.objects.platformer.box2d.Coin" x="138" y="67" width="28" height="29"/>
+  <object id="81" type="citrus.objects.platformer.box2d.Coin" x="185" y="67" width="28" height="29"/>
+  <object id="85" type="citrus.objects.platformer.box2d.Platform" x="844" y="483">
+   <polygon points="0,0 -13,28 11,28"/>
+  </object>
+  <object id="87" type="citrus.objects.platformer.box2d.Platform" x="866" y="484">
+   <polygon points="0,0 -13,28 11,28"/>
+  </object>
+  <object id="88" type="citrus.objects.platformer.box2d.Platform" x="888" y="484">
+   <polygon points="0,0 -13,28 11,28"/>
+  </object>
+  <object id="89" type="citrus.objects.platformer.box2d.Platform" x="908" y="481" width="10" height="10">
+   <polygon points="0,0 -13,28 11,28"/>
+  </object>
+  <object id="90" type="citrus.objects.platformer.box2d.Platform" x="929" y="481">
+   <polygon points="0,0 -13,28 11,28"/>
+  </object>
+ </objectgroup>
+</map>

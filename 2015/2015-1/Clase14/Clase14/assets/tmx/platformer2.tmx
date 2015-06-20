@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="100" height="100" tilewidth="64" tileheight="64">
+ <tileset firstgid="1" name="Tileset.png" tilewidth="64" tileheight="64">
+  <image source="Tileset.png" width="576" height="192"/>
+ </tileset>
+ <objectgroup name="citrus objects" width="100" height="100">
+  <object type="citrus.objects.platformer.box2d.Platform" x="0" y="0" width="64" height="576"/>
+  <object type="citrus.objects.platformer.box2d.Platform" x="64" y="448" width="192" height="128"/>
+  <object type="citrus.objects.platformer.box2d.Platform" x="384" y="448" width="448" height="128"/>
+  <object type="citrus.objects.platformer.box2d.Platform" x="960" y="448" width="256" height="128"/>
+  <object type="citrus.objects.platformer.box2d.Platform" x="832" y="512" width="128" height="64"/>
+  <object type="citrus.objects.platformer.box2d.Platform" x="64" y="192" width="192" height="64"/>
+  <object type="citrus.objects.platformer.box2d.Platform" x="384" y="192" width="448" height="64"/>
+  <object type="citrus.objects.platformer.box2d.Platform" x="576" y="0" width="128" height="192"/>
+  <object type="citrus.objects.platformer.box2d.Platform" x="960" y="128" width="255" height="61"/>
+  <object type="citrus.objects.platformer.box2d.Platform" x="1152" y="256" width="254" height="64"/>
+  <object type="citrus.objects.platformer.box2d.Platform" x="1408" y="0" width="64" height="576"/>
+  <object type="citrus.objects.platformer.box2d.Platform" x="256" y="448" width="127" height="18"/>
+  <object type="citrus.objects.platformer.box2d.Platform" x="1216" y="448" width="191" height="20"/>
+  <object type="citrus.objects.platformer.box2d.Platform" x="835" y="492" width="124" height="21"/>
+  <object type="citrus.objects.platformer.box2d.Platform" x="68" y="0" width="507" height="19"/>
+  <object name="hero" type="citrus.objects.platformer.box2d.Hero" x="79" y="356" width="38" height="63">
+   <properties>
+    <property name="canDuck" value="false"/>
+    <property name="hurtVelocityX" value="3"/>
+    <property name="hurtVelocityY" value="5"/>
+    <property name="jumpHeight" value="9"/>
+    <property name="maxVelocity" value="3"/>
+    <property name="view" value="CharMC"/>
+   </properties>
+  </object>
+  <object name="crate" type="citrus.objects.platformer.box2d.Crate" x="192" y="128" width="64" height="64">
+   <properties>
+    <property name="view" value="CrateMC"/>
+   </properties>
+  </object>
+  <object type="citrus.objects.platformer.box2d.MovingPlatform" x="285" y="128" width="66" height="15">
+   <properties>
+    <property name="endX" value="320"/>
+    <property name="endY" value="400"/>
+    <property name="speed" value="0.8"/>
+    <property name="startX" value="320"/>
+    <property name="view" value="MovingMC"/>
+   </properties>
+  </object>
+  <object type="citrus.objects.platformer.box2d.MovingPlatform" x="859" y="129" width="67" height="14">
+   <properties>
+    <property name="endX" value="896"/>
+    <property name="endY" value="400"/>
+    <property name="speed" value="0.8"/>
+    <property name="startX" value="896"/>
+    <property name="startY" value="192"/>
+    <property name="view" value="MovingMC"/>
+   </properties>
+  </object>
+  <object type="citrus.objects.platformer.box2d.Enemy" x="642" y="407" width="48" height="26">
+   <properties>
+    <property name="speed" value="0.5"/>
+    <property name="view" value="EnemyMC"/>
+   </properties>
+  </object>
+  <object type="citrus.objects.platformer.box2d.Enemy" x="1061" y="85" width="48" height="26">
+   <properties>
+    <property name="speed" value="0.5"/>
+    <property name="view" value="EnemyMC"/>
+   </properties>
+  </object>
+  <object type="citrus.objects.platformer.box2d.Enemy" x="1344" y="407" width="48" height="26">
+   <properties>
+    <property name="speed" value="0.5"/>
+    <property name="view" value="EnemyMC"/>
+   </properties>
+  </object>
+  <object type="citrus.objects.platformer.box2d.Platform" x="966" y="110" width="47" height="31"/>
+  <object type="citrus.objects.platformer.box2d.Platform" x="776" y="425" width="47" height="31"/>
+  <object type="citrus.objects.platformer.box2d.Platform" x="384" y="128" width="64" height="64"/>
+  <object type="citrus.objects.platformer.box2d.Platform" x="968" y="425" width="47" height="31"/>
+  <object type="citrus.objects.platformer.box2d.Platform" x="1152" y="64" width="64" height="64"/>
+  <object type="citrus.objects.platformer.box2d.Platform" x="384" y="384" width="64" height="64"/>
+  <object name="crate" type="citrus.objects.platformer.box2d.Crate" x="1280" y="192" width="64" height="64">
+   <properties>
+    <property name="view" value="CrateMC"/>
+   </properties>
+  </object>
+  <object type="citrus.objects.platformer.box2d.Coin" x="177" y="289" width="28" height="29">
+   <properties>
+    <property name="view" value="CoinMC"/>
+   </properties>
+  </object>
+  <object type="citrus.objects.platformer.box2d.Coin" x="131" y="289" width="28" height="29">
+   <properties>
+    <property name="view" value="CoinMC"/>
+   </properties>
+  </object>
+  <object type="citrus.objects.platformer.box2d.Coin" x="224" y="289" width="28" height="29">
+   <properties>
+    <property name="view" value="CoinMC"/>
+   </properties>
+  </object>
+  <object type="citrus.objects.platformer.box2d.Coin" x="224" y="336" width="28" height="29">
+   <properties>
+    <property name="view" value="CoinMC"/>
+   </properties>
+  </object>
+  <object type="citrus.objects.platformer.box2d.Coin" x="178" y="335" width="28" height="29">
+   <properties>
+    <property name="view" value="CoinMC"/>
+   </properties>
+  </object>
+  <object type="citrus.objects.platformer.box2d.Coin" x="132" y="335" width="28" height="29">
+   <properties>
+    <property name="view" value="CoinMC"/>
+   </properties>
+  </object>
+  <object type="citrus.objects.platformer.box2d.Coin" x="488" y="65" width="28" height="29">
+   <properties>
+    <property name="view" value="CoinMC"/>
+   </properties>
+  </object>
+  <object type="citrus.objects.platformer.box2d.Coin" x="535" y="65" width="28" height="29">
+   <properties>
+    <property name="view" value="CoinMC"/>
+   </properties>
+  </object>
+  <object type="citrus.objects.platformer.box2d.Coin" x="442" y="65" width="28" height="29">
+   <properties>
+    <property name="view" value="CoinMC"/>
+   </properties>
+  </object>
+  <object type="citrus.objects.platformer.box2d.Coin" x="519" y="290" width="28" height="29">
+   <properties>
+    <property name="view" value="CoinMC"/>
+   </properties>
+  </object>
+  <object type="citrus.objects.platformer.box2d.Coin" x="520" y="336" width="28" height="29">
+   <properties>
+    <property name="view" value="CoinMC"/>
+   </properties>
+  </object>
+  <object type="citrus.objects.platformer.box2d.Coin" x="566" y="337" width="28" height="29">
+   <properties>
+    <property name="view" value="CoinMC"/>
+   </properties>
+  </object>
+  <object type="citrus.objects.platformer.box2d.Coin" x="566" y="290" width="28" height="29">
+   <properties>
+    <property name="view" value="CoinMC"/>
+   </properties>
+  </object>
+  <object type="citrus.objects.platformer.box2d.Coin" x="474" y="336" width="28" height="29">
+   <properties>
+    <property name="view" value="CoinMC"/>
+   </properties>
+  </object>
+  <object type="citrus.objects.platformer.box2d.Coin" x="473" y="290" width="28" height="29">
+   <properties>
+    <property name="view" value="CoinMC"/>
+   </properties>
+  </object>
+  <object type="citrus.objects.platformer.box2d.Coin" x="659" y="289" width="28" height="29">
+   <properties>
+    <property name="view" value="CoinMC"/>
+   </properties>
+  </object>
+  <object type="citrus.objects.platformer.box2d.Coin" x="660" y="335" width="28" height="29">
+   <properties>
+    <property name="view" value="CoinMC"/>
+   </properties>
+  </object>
+  <object type="citrus.objects.platformer.box2d.Coin" x="706" y="336" width="28" height="29">
+   <properties>
+    <property name="view" value="CoinMC"/>
+   </properties>
+  </object>
+  <object type="citrus.objects.platformer.box2d.Coin" x="706" y="289" width="28" height="29">
+   <properties>
+    <property name="view" value="CoinMC"/>
+   </properties>
+  </object>
+  <object type="citrus.objects.platformer.box2d.Coin" x="614" y="335" width="28" height="29">
+   <properties>
+    <property name="view" value="CoinMC"/>
+   </properties>
+  </object>
+  <object type="citrus.objects.platformer.box2d.Coin" x="613" y="289" width="28" height="29">
+   <properties>
+    <property name="view" value="CoinMC"/>
+   </properties>
+  </object>
+  <object type="citrus.objects.platformer.box2d.Coin" x="764" y="37" width="28" height="29">
+   <properties>
+    <property name="view" value="CoinMC"/>
+   </properties>
+  </object>
+  <object type="citrus.objects.platformer.box2d.Coin" x="765" y="83" width="28" height="29">
+   <properties>
+    <property name="view" value="CoinMC"/>
+   </properties>
+  </object>
+  <object type="citrus.objects.platformer.box2d.Coin" x="811" y="84" width="28" height="29">
+   <properties>
+    <property name="view" value="CoinMC"/>
+   </properties>
+  </object>
+  <object type="citrus.objects.platformer.box2d.Coin" x="811" y="37" width="28" height="29">
+   <properties>
+    <property name="view" value="CoinMC"/>
+   </properties>
+  </object>
+  <object type="citrus.objects.platformer.box2d.Coin" x="719" y="83" width="28" height="29">
+   <properties>
+    <property name="view" value="CoinMC"/>
+   </properties>
+  </object>
+  <object type="citrus.objects.platformer.box2d.Coin" x="718" y="37" width="28" height="29">
+   <properties>
+    <property name="view" value="CoinMC"/>
+   </properties>
+  </object>
+  <object type="citrus.objects.platformer.box2d.Coin" x="1004" y="26" width="28" height="29">
+   <properties>
+    <property name="view" value="CoinMC"/>
+   </properties>
+  </object>
+  <object type="citrus.objects.platformer.box2d.Coin" x="1097" y="26" width="28" height="29">
+   <properties>
+    <property name="view" value="CoinMC"/>
+   </properties>
+  </object>
+  <object type="citrus.objects.platformer.box2d.Coin" x="1050" y="26" width="28" height="29">
+   <properties>
+    <property name="view" value="CoinMC"/>
+   </properties>
+  </object>
+  <object type="citrus.objects.platformer.box2d.Coin" x="1299" y="65" width="28" height="29">
+   <properties>
+    <property name="view" value="CoinMC"/>
+   </properties>
+  </object>
+  <object type="citrus.objects.platformer.box2d.Coin" x="1253" y="65" width="28" height="29">
+   <properties>
+    <property name="view" value="CoinMC"/>
+   </properties>
+  </object>
+  <object type="citrus.objects.platformer.box2d.Coin" x="1345" y="66" width="28" height="29">
+   <properties>
+    <property name="view" value="CoinMC"/>
+   </properties>
+  </object>
+  <object type="citrus.objects.platformer.box2d.Coin" x="1252" y="19" width="28" height="29">
+   <properties>
+    <property name="view" value="CoinMC"/>
+   </properties>
+  </object>
+  <object type="citrus.objects.platformer.box2d.Coin" x="1345" y="19" width="28" height="29">
+   <properties>
+    <property name="view" value="CoinMC"/>
+   </properties>
+  </object>
+  <object type="citrus.objects.platformer.box2d.Coin" x="1298" y="19" width="28" height="29">
+   <properties>
+    <property name="view" value="CoinMC"/>
+   </properties>
+  </object>
+  <object type="citrus.objects.platformer.box2d.Coin" x="1255" y="110" width="28" height="29">
+   <properties>
+    <property name="view" value="CoinMC"/>
+   </properties>
+  </object>
+  <object type="citrus.objects.platformer.box2d.Coin" x="1301" y="110" width="28" height="29">
+   <properties>
+    <property name="view" value="CoinMC"/>
+   </properties>
+  </object>
+  <object type="citrus.objects.platformer.box2d.Coin" x="1347" y="111" width="28" height="29">
+   <properties>
+    <property name="view" value="CoinMC"/>
+   </properties>
+  </object>
+  <object type="citrus.objects.platformer.box2d.Coin" x="880" y="220" width="28" height="29">
+   <properties>
+    <property name="view" value="CoinMC"/>
+   </properties>
+  </object>
+  <object type="citrus.objects.platformer.box2d.Coin" x="880" y="173" width="28" height="29">
+   <properties>
+    <property name="view" value="CoinMC"/>
+   </properties>
+  </object>
+  <object type="citrus.objects.platformer.box2d.Coin" x="879" y="316" width="28" height="29">
+   <properties>
+    <property name="view" value="CoinMC"/>
+   </properties>
+  </object>
+  <object type="citrus.objects.platformer.box2d.Coin" x="879" y="269" width="28" height="29">
+   <properties>
+    <property name="view" value="CoinMC"/>
+   </properties>
+  </object>
+  <object type="citrus.objects.platformer.box2d.Coin" x="1267" y="339" width="28" height="29">
+   <properties>
+    <property name="view" value="CoinMC"/>
+   </properties>
+  </object>
+  <object type="citrus.objects.platformer.box2d.Coin" x="1127" y="340" width="28" height="29">
+   <properties>
+    <property name="view" value="CoinMC"/>
+   </properties>
+  </object>
+  <object type="citrus.objects.platformer.box2d.Coin" x="1220" y="340" width="28" height="29">
+   <properties>
+    <property name="view" value="CoinMC"/>
+   </properties>
+  </object>
+  <object type="citrus.objects.platformer.box2d.Coin" x="1360" y="339" width="28" height="29">
+   <properties>
+    <property name="view" value="CoinMC"/>
+   </properties>
+  </object>
+  <object type="citrus.objects.platformer.box2d.Coin" x="1313" y="339" width="28" height="29">
+   <properties>
+    <property name="view" value="CoinMC"/>
+   </properties>
+  </object>
+  <object type="citrus.objects.platformer.box2d.Coin" x="1173" y="340" width="28" height="29">
+   <properties>
+    <property name="view" value="CoinMC"/>
+   </properties>
+  </object>
+  <object type="citrus.objects.platformer.box2d.Coin" x="92" y="67" width="28" height="29">
+   <properties>
+    <property name="view" value="CoinMC"/>
+   </properties>
+  </object>
+  <object type="citrus.objects.platformer.box2d.Coin" x="138" y="67" width="28" height="29">
+   <properties>
+    <property name="view" value="CoinMC"/>
+   </properties>
+  </object>
+  <object type="citrus.objects.platformer.box2d.Coin" x="185" y="67" width="28" height="29">
+   <properties>
+    <property name="view" value="CoinMC"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer name="Tile Layer 1" width="100" height="100">
+  <data encoding="base64" compression="zlib">
+   eJzt0cEJAAAIxLDD/Yf27wKiJNAJmgAAwF81YpcfAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABc0KTnABE=
+  </data>
+ </layer>
+ <layer name="Tile Layer 2" width="100" height="100">
+  <data encoding="base64" compression="zlib">
+   eJztwTEBAAAAwqD1T+1lC6AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAbnEAAAQ==
+  </data>
+ </layer>
+</map>
