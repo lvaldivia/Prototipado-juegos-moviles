@@ -22,7 +22,7 @@ package
 		{
 			removeEventListener(Event.ADDED_TO_STAGE, added);
 			var assets:Vector.<String> = new Vector.<String>();
-			assets.push("assets/flappy.png");
+			assets.push("assets/flap.mp3");
 			assets.push("assets/flappy.xml");
 			assets.push("graphics/mySpritesheet.xml");
 			assets.push("graphics/mySpritesheet.png");

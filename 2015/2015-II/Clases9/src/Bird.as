@@ -7,6 +7,7 @@ package
 	import Utils.input.DMouse;
 	import Utils.objects.DGameObject;
 	import Utils.physics.DPhysicsGameObject;
+	import Utils.start.DStarling;
 	
 	/**
 	 * ...
@@ -27,7 +28,7 @@ package
 		
 		public function fap():void 
 		{
-			if(DMouse.isDown){
+			if (DMouse.isDown) {
 				DMouse.isDown = false;
 				body.velocity.y = -300;
 			}

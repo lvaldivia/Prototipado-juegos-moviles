@@ -54,6 +54,7 @@
   <!-- SWC Libraries -->
   <libraryPaths>
     <element path="lib\nape-dev.swc" />
+    <element path="lib\SoundAS.swc" />
   </libraryPaths>
   <!-- External Libraries -->
   <externalLibraryPaths>
