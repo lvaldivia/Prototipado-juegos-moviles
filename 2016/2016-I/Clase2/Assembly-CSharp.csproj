@@ -47,7 +47,12 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\BgLooper.cs" />
      <Compile Include="Assets\Scripts\BgScaler.cs" />
+     <Compile Include="Assets\Scripts\ButtonController.cs" />
+     <Compile Include="Assets\Scripts\MonsterController.cs" />
+     <Compile Include="Assets\Scripts\Movement.cs" />
+     <Compile Include="Assets\Scripts\PlayerAnimation.cs" />
      <Compile Include="Assets\Scripts\PlayerJump.cs" />
+     <Compile Include="Assets\Scripts\ScoreController.cs" />
      <Compile Include="Assets\Scripts\StartButton.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
