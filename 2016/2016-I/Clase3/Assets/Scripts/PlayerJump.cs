@@ -9,7 +9,7 @@ public class PlayerJump : MonoBehaviour {
 	bool canJump;
 	Button jumpButton;
 	Animator anim;
-	float jumpPower = 12f;
+	float jumpPower = 16f;
 	const string RUNNING = "running";
 	const string JUMPING = "jumping";
 	const string IDLE = "iddle";
@@ -26,8 +26,13 @@ public class PlayerJump : MonoBehaviour {
 	void jump(){
 		if (canJump) {
 			canJump = false;
+			float forwardForce = 0f;
+			if (transform.position.x < 0) {
+				forwardForce = 2f;
+			}
 			anim.Play (JUMPING);
-			body.velocity = new Vector2 (body.velocity.x, jumpPower);
+			print (forwardForce);
+			body.velocity = new Vector2 (forwardForce, jumpPower);
 		}
 	}
 	
