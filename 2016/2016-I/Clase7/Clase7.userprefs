@@ -1,12 +1,8 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Player\PlayerBounds.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Menu\MenuController.cs">
     <Files>
-      <File FileName="Assets\Scripts\CloudSpawner.cs" Line="28" Column="3" />
-      <File FileName="Assets\Scripts\CloudCollector.cs" Line="6" Column="1" />
-      <File FileName="Assets\Scripts\BgCollector.cs" Line="11" Column="3" />
-      <File FileName="Assets\Scripts\BgSpawner.cs" Line="32" Column="22" />
-      <File FileName="Assets\Scripts\Player\PlayerBounds.cs" Line="24" Column="42" />
+      <File FileName="Assets\Scripts\Menu\MenuController.cs" Line="30" Column="37" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
