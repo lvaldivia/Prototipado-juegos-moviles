@@ -9,6 +9,12 @@ public class CameraMovement : MonoBehaviour {
 	private float accelaration = 0.2f;
 	[HideInInspector]
 	public bool moveCamera;
+
+	public static CameraMovement instance;
+
+	void Awake(){
+		instance = this;
+	}
 	void Start () {
 		moveCamera = true;
 	}

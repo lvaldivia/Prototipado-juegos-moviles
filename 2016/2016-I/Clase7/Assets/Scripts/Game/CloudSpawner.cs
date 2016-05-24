@@ -65,10 +65,11 @@ public class CloudSpawner : MonoBehaviour {
 		}
 		Vector3 tmp = goods [0].transform.position;
 		for(int i = 1;i<goods.Length;i++){
-			if (tmp.y < goods [i].transform.position.y) {
+			if (tmp.y > goods [i].transform.position.y) {
 				tmp = goods [i].transform.position;
 			}
 		}
+		print (tmp);
 		tmp.y += 0.8f;
 		player.transform.position = tmp;
 

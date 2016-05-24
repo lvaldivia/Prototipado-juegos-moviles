@@ -1,0 +1,15 @@
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Game\BackgroundSpawner.cs">
+    <Files>
+      <File FileName="Assets\Scripts\Game\CameraMovement.cs" Line="13" Column="40" />
+      <File FileName="Assets\Scripts\Game\Player.cs" Line="20" Column="20" />
+      <File FileName="Assets\Scripts\Game\BackgroundSpawner.cs" Line="21" Column="13" />
+      <File FileName="Assets\Scripts\Game\BackgroundCollector.cs" Line="9" Column="3" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
