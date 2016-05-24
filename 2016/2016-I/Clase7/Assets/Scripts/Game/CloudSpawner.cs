@@ -43,7 +43,7 @@ public class CloudSpawner : MonoBehaviour {
 			Vector3 tmp = clouds [i].transform.position;
 			tmp.x = posX;
 			tmp.y = nextPositionY;
-			lastPositionY = nextPositionY;
+			lastPositionY = tmp.y;
 			nextPositionY -= distanceToCloud;
 			clouds [i].transform.position = tmp;
 		}
@@ -74,24 +74,26 @@ public class CloudSpawner : MonoBehaviour {
 
 	}
 
-	void OnTriggerEnter2D(Collider2D target) {
 
-		if (target.tag == "Deadly" || target.tag == "Cloud") {
-
-			if(target.transform.position.y == lastPositionY) {
-				Vector3 temp = target.transform.position;
-				shuffleClouds();
-				for(int i = 0; i < clouds.Length; i++) {
-					if(!clouds[i].activeInHierarchy) {
-						temp.y -= distanceToCloud;
-						lastPositionY = temp.y;
-						clouds[i].transform.position = temp;
-						clouds[i].SetActive(true);
+	void OnTriggerEnter2D(Collider2D coll){
+		if (coll.gameObject.tag == "Cloud" ||
+		   coll.gameObject.tag == "Deadly") {
+			GameObject go = coll.gameObject;
+			Vector3 tmp = go.transform.position;
+			print (go.transform.position.y + " " + lastPositionY);
+			if (go.transform.position.y >= lastPositionY) {
+				for(int i = 0;i<clouds.Length;i++){
+					if(!clouds[i].activeInHierarchy){
+						clouds [i].SetActive (true);
+						float posX = Random.Range (minX, maxX);
+						tmp.x = posX;
+						tmp.y -= distanceToCloud;
+						lastPositionY = tmp.y;
+						print (tmp);
+						clouds [i].transform.position = tmp;
 					}
-				} 
+				}
 			}
-
 		}
-
 	}
 }
