@@ -31,7 +31,7 @@ public class SceneFader : MonoBehaviour {
 		SceneManager.LoadScene (scene);
 		yield return new WaitForSeconds (1f);
 		animation.Play ("fadeout");
-		yield return new WaitForSeconds (1f);
+		yield return new WaitForSeconds (0.8f);
 		gameObject.SetActive (false);
 	}
 

@@ -26,7 +26,6 @@ public class Player : MonoBehaviour {
 	void Start () {
 		body = GetComponent<Rigidbody2D> ();
 		anim = GetComponent<Animator> ();
-		joystick.transform.localScale = new Vector3 (0.5f, 0.5f, 0.5f);
 		posY = transform.position.y;
 	}
 
