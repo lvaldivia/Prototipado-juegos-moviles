@@ -1,0 +1,17 @@
+﻿<Properties RefactoringSettings.EnableRefactorings="True" StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Click.cs">
+    <Files>
+      <File FileName="Assets\Scripts\FacebookController.cs" Line="48" Column="11" />
+      <File FileName="Assets\Scripts\GameSettings.cs" Line="3" Column="16" />
+      <File FileName="Assets\Scripts\User.cs" Line="12" Column="4" />
+      <File FileName="Assets\Scripts\StartGame.cs" Line="17" Column="5" />
+      <File FileName="Assets\Scripts\ProfileLoader.cs" Line="10" Column="7" />
+      <File FileName="Assets\Scripts\Click.cs" Line="3" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
