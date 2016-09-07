@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<style type="text/css">
+	body{
+		margin: 0;
+		padding: 0;
+		background-color: black;
+	}
+</style>
+
+<script type="text/javascript" src="lib/phaser.js"></script>
+<script type="text/javascript">
+	var game = new Phaser.Game(360,640,Phaser.AUTO,'',
+			{preload:preload,create:create}
+		),
+		elements = [],
+		pet = {},
+		clone = {},
+		uiSelected = false,
+		itemSelected = '';
+
+	function preload(){
+		game.load.image('background',
+			'assets/backyard.png');
+		game.load.image('apple',
+			'assets/apple.png');
+		game.load.image('duck',
+			'assets/rubber_duck.png');
+		game.load.image('candy',
+			'assets/candy.png');
+		game.load.spritesheet(
+			'pet','assets/pet.png',97,83,5,1,1);
+
+		game.scale.scaleMode = 
+			Phaser.ScaleManager.SHOW_ALL;
+		game.scale.pageAlignHorizontally = true;
+		game.scale.pageAlignVertically = true;
+	}
+
+	function create(){
+		var background =
+			game.add.sprite(0,0,'background');
+
+		pet = game.add.sprite(0,0,'pet');
+		pet.anchor.setTo(0.5);
+		pet.x = game.world.centerX;
+		pet.y = 100;
+		pet.animations.add("happy",[1,2,3,2,1]);
+		
+
+		var apple = game.add.sprite(
+			100,450,'apple');
+
+		apple.anchor.setTo(0.5);
+		var candy = game.add.sprite(
+			200,450,'candy');
+		candy.anchor.setTo(0.5);
+
+		var duck = game.add.sprite(
+			300,450,'duck');
+		duck.anchor.setTo(0.5);
+
+		elements = [apple, candy, duck];
+		elements.forEach(function(element){
+			element.inputEnabled = true;
+			element.events.onInputDown.add(selectItem);
+		});
+		background.inputEnabled = true;
+		background.events.onInputDown.add(
+			placeItem);
+	}
+
+	function placeItem(sprite, event){
+		if(itemSelected != ''){
+			clone = game.add.sprite(
+				event.position.x,
+				event.position.y,
+				itemSelected
+				);
+			clone.anchor.setTo(0.5);
+			pet.bringToTop();
+			itemSelected = '';
+			var tween = game.add.tween(pet).to({
+				x:clone.x,
+				y:clone.y
+			});
+			tween.start();
+			tween.onComplete.add(giveItem);
+			/*tween.onComplete.add(function(){
+
+			});*/
+		}
+	}
+
+	function giveItem(){
+		pet.animations.play("happy",12);
+		uiSelected = false;
+		clone.destroy();
+		//clone.kill();
+	}
+
+	function selectItem(sprite){
+		if(!uiSelected){
+			elements.forEach(function(element){
+				if(element.alpha != 1){
+					element.alpha = 1;	
+				}
+			});
+			itemSelected = sprite.key;
+			sprite.alpha = 0.7;	
+			uiSelected = true;
+		}
+	}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<style type="text/css">
+	body{
+		margin: 0;
+		padding: 0;
+	}
+</style>
+
+
+<div id="mijuego"></div>
+
+<script type="text/javascript" src="lib/phaser.js"></script>
+<script type="text/javascript">
+	/*var var1 = 0;
+	var1 = "Hola";
+	var1 = {key:'hola',num:0};
+	console.log("Hola");
+	*/
+	var game = new Phaser.Game(
+		360,640,Phaser.AUTO,'',
+		{preload:preload,create:create}
+		);
+	var elements = [];
+	var itemSelected = '';
+
+	function preload(){
+		game.load.image('background',
+			'assets/backyard.png');
+		game.load.image('apple',
+			'assets/apple.png');
+		game.load.image('duck',
+			'assets/rubber_duck.png');
+		game.load.image('candy',
+			'assets/candy.png');
+	}
+
+	function create(){
+		var background =
+			game.add.sprite(0,0,'background');
+
+		var apple = game.add.sprite(
+			100,450,'apple');
+
+		apple.anchor.setTo(0.5);
+		var candy = game.add.sprite(
+			200,450,'candy');
+		candy.anchor.setTo(0.5);
+
+		var duck = game.add.sprite(
+			300,450,'duck');
+		duck.anchor.setTo(0.5);
+
+		elements = [apple, candy, duck];
+		elements.forEach(function(element){
+			element.inputEnabled = true;
+			element.events.onInputDown.add(selectItem);
+		});
+		background.inputEnabled = true;
+		background.events.onInputDown.add(
+			placeItem);
+	}
+
+	function placeItem(sprite, event){
+		if(itemSelected != ''){
+			var clone = game.add.sprite(
+				event.position.x,
+				event.position.y,
+				itemSelected
+				);
+			clone.anchor.setTo(0.5);
+		}
+	}
+
+	function selectItem(sprite){
+		elements.forEach(function(element){
+			if(element.alpha != 1){
+				element.alpha = 1;	
+			}
+		});
+		itemSelected = sprite.key;
+		sprite.alpha = 0.7;
+	}
+
+</script>
+</body>
+</html>
